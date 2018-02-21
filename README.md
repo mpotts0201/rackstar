@@ -5,3 +5,7 @@ Trello: https://trello.com/b/uFuz8gvP/rackstar
 Figma: https://www.figma.com/file/OeG3oHLAeyFAot3pEDR3TcSq/rackstar
 
 Heroku: 
+https://secret-crag-94679.herokuapp.com/
+
+GitHUb: 
+https://github.com/mpotts0201/rackstar

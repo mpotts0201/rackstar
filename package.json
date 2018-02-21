@@ -1,0 +1,27 @@
+{
+  "name": "rackstar",
+  "version": "1.0.0",
+  "description": "A fitness routine sharing app",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mpotts0201/rackstar.git"
+  },
+  "author": "mpotts0201",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mpotts0201/rackstar/issues"
+  },
+  "homepage": "https://github.com/mpotts0201/rackstar#readme",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "express": "^4.16.2",
+    "hbs": "^4.0.1",
+    "method-override": "^2.3.10",
+    "mongoose": "^5.0.6"
+  }
+}

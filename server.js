@@ -9,7 +9,7 @@ const methodOverride = require('method-override')
 const hbs = require('hbs')
 const mongoose = require('mongoose')
 const userController = require('./controllers/userController')
-
+const homeController = require('./controllers/homeController')
 ///////////////////////////////////////////////////////
 ////////////////// App Settings ///////////////////////
 ///////////////////////////////////////////////////////
@@ -30,7 +30,7 @@ app.use(methodOverride('_method'))
 
 app.use('/users', userController)
 
-
+app.use('/', homeController)
 
 
 

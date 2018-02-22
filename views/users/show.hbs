@@ -1,0 +1,14 @@
+<h1>{{user.username}}'s account</h1>
+
+{{#each user}}
+<p>{{name}}</p>
+<p>{{age}}</p>
+<p>{{email}}</p>
+
+{{/each}}
+<form action="/users/{{user.id}}?_method=DELETE" method="post">
+<button type="submit">Delete Account</button>
+</form>
+
+<a href="/users">Back to User Index</a>
+<a href="/users/{{user._id}}/edit">Edit Account</a>

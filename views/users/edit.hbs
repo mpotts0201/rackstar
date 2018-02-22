@@ -1,0 +1,23 @@
+<h1>Edit {{user.name}}'s account</h1>
+
+<form method="post" action="/users/{{id}}?_method=PATCH" >
+    <div>
+        <label for="name">Name of User</label>
+        <input type="text" name="name" value="{{user.name}}">
+    </div>
+    <div>
+        <label for="age">Age of User</label>
+        <input type="text" name="age" value="{{user.age}}">
+    </div>
+    <div>
+        <label for="email">Email of User</label>
+        <input type="text" name="email" value="{{user.email}}">
+    </div>
+    <div>
+        <label for="username">Username of User</label>
+        <input type="text" name="username" value="{{user.username}}">
+    </div>
+
+  <button type="submit">Update User</button>
+
+</form>

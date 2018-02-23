@@ -1,0 +1,13 @@
+<h1>{{routine.name}}</h1>
+
+{{#each routine}}
+<p>{{name}}</p>
+<p>{{instructions}}</p>
+
+{{/each}}
+<form action="/users/{{routine.id}}?_method=DELETE" method="post">
+<button type="submit">Delete Routine</button>
+</form>
+
+<a href="/routines">Back to Routine Index</a>
+<a href="/routines/{{routine._id}}/edit">Edit Account</a>

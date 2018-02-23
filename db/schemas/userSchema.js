@@ -6,7 +6,7 @@
 const mongoose = require('mongoose')
 const Schema = mongoose.Schema
 mongoose.Promise = global.Promise
-
+const RoutineSchema = require('./routineSchema')
 
 
 const UserSchema = new Schema({
@@ -14,7 +14,7 @@ const UserSchema = new Schema({
     age: Number,
     email: String,
     username: String,
-    routines: []
+    routines: [ RoutineSchema ]
 })
 
 

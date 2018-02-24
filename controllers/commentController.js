@@ -28,7 +28,7 @@ router.get('/new', (req, res)=>{
 // CREATE // 
 router.post('/', (req, res)=>{
     User.findById(req.params.userId).then((user)=>{
-        const newComment = new Routine({
+        const newComment = new CommentModel({
             text: req.body.text
         })
         user.comments.push(newComment)

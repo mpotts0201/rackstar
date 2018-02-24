@@ -31,7 +31,7 @@ app.use(methodOverride('_method'))
 
 app.use('/users', userController)
 app.use('/', homeController)
-app.use('/routines', routineController)
+app.use('/users/:userId/routines', routineController)
 
 
 ///////////////////////////////////////////////////////

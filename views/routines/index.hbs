@@ -1,5 +1,9 @@
-<h1>Routines</h1>
+<h1>{{user.username}}'s Routines</h1>
 
 {{#each routines}}
-<h3><a href="/routines/{{_id}}">{{name}}</a></h3>
+<h3><a href="/users/{{../user._id}}/routines/{{_id}}">{{name}}</a></h3>
 {{/each}}
+
+<a href="/users/{{user._id}}/routines/new">Add a new routine</a>
+
+<a href="/users/">Back to users</a>

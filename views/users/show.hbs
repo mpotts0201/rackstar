@@ -1,11 +1,12 @@
 <h1>{{user.username}}'s account</h1>
 
-{{#each user}}
-<p>{{name}}</p>
-<p>{{age}}</p>
-<p>{{email}}</p>
-
+<p>Name: {{user.name}}</p>
+<p>Age: {{user.age}}</p>
+<p>email: {{user.email}}</p>
+{{#each user.routines}}
+<p>Routines: {{name}}</a></p>
 {{/each}}
+
 <form action="/users/{{user.id}}?_method=DELETE" method="post">
 <button type="submit">Delete Account</button>
 </form>

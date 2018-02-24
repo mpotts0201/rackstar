@@ -6,11 +6,13 @@ const Routine = require('../models/routine')
 const chestPress = new Routine({
     name: "Chest Press",
     muscleGroup: "pectorals",
-    instrucitons: "Using a bench, with a barbell or dumbells, align the weight with your mid chest, and push with your shoulders back.",
+    instructions: "Using a bench, with a barbell or dumbells, align the weight with your mid chest, and push with your shoulders back.",
     reps: "8-12",
     sets: "3",
     comments: []
 })
+
+// const routineArr = [ chestPress ]
 
 
 const murphy = new User({
@@ -23,7 +25,7 @@ const murphy = new User({
 
 // Save the routines
 
-User.remove().then(()=>{
+Routine.remove().then(()=>{
     return chestPress.save()
 }).then(()=>{
     console.log("Routines are saved")

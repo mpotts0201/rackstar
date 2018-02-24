@@ -3,8 +3,10 @@
 ///////////////////////////////////////////////////////
 
 const express = require('express')
-const router = express.Router()
+const router = express.Router({ mergeParams: true })
 const User = require('../models/user')
+const Routine = require('../models/routine')
+
 
 ///////////////////////////////////////////////////////
 ////////////////// Routes /////////////////////////////
@@ -13,11 +15,22 @@ const User = require('../models/user')
 // INDEX //
 router.get('/', (req, res)=>{
     
+
     User.find().then((users)=>{
+
+        // const routines = users.map(user =>{
+        //     return user.routines
+        // })
+
+        // routines = routines.reduce((a, b) => a.concat(b), [])
+
+        // console.log(routines)
         res.render('users/index', {
-            users: users
+            users: users,
+            // routines: routines
         })
     })
+
     
 })
 
@@ -60,7 +73,6 @@ router.get('/:id/edit', (req, res)=>{
             user: user
         })
     })
-    
     
 
 })

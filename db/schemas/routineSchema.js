@@ -13,6 +13,8 @@ const RoutineSchema = new Schema({
     name: String,
     muscleGroup: String,
     instructions: String,
+    reps: String,
+    sets: String,
     comments: [  ]
 })
 

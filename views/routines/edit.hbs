@@ -1,0 +1,29 @@
+<h1>Edit routine</h1>
+
+<form method="post" action="/users/{{userId}}/routines/{{routine._id}}?_method=PATCH">
+    <div>
+        <label for="name">Name of Routine</label>
+        <input type="text" name="name" value="{{routine.name}}">
+    </div>
+    <div>
+        <label for="muscleGroup">Muscle Group</label>
+        <input type="text" name="muscleGroup" value="{{routine.muscleGroup}}">
+    </div>
+    <div>
+        <label for="instructions">Instructions</label>
+        <input type="text" name="instructions" value="{{routine.instructions}}">
+    </div>
+    <div>
+        <label for="reps">Reps </label>
+        <input type="text" name="reps" value="{{routine.reps}}">
+    </div>
+    <div>
+        <label for="sets">Sets </label>
+        <input type="text" name="sets" value="{{routine.sets}}">
+    </div>
+
+    <button type="submit">Update Routine</button>
+
+<a href="/users/{{userId}}/routines/{{routine._id}}">Back to Routine page</a>
+
+</form>

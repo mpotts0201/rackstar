@@ -1,0 +1,28 @@
+<h1>Create a new routine</h1>
+
+<form action="/users/{{userId}}/routines" method="POST">
+<div>
+    <label for="name">Routine Name: </label>
+    <input type="text" name="name">
+</div>
+<div>
+    <label for="muscleGroup">Muscle Group: </label>
+    <input type="text" name="muscleGroup">
+</div>
+<div>
+    <label for="instructions">Instructions</label>
+    <input type="text" name="instructions">
+</div>
+<div>
+    <label for="reps">Reps: </label>
+    <input type="text" name="reps">
+</div>
+<div>
+    <label for="sets">Sets: </label>
+    <input type="text" name="sets">
+</div>
+<button type="submit">Submit</button>
+
+
+<a href="/users/{{userId}}/routines">Back to Routine Index</a>
+</form>

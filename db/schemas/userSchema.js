@@ -14,8 +14,9 @@ const UserSchema = new Schema({
     age: Number,
     email: String,
     username: String,
-    routines: [ RoutineSchema ],
-    comments: [ CommentSchema ]
+    comments: [ CommentSchema ],
+
+    routines: [ RoutineSchema ]
 })
 
 

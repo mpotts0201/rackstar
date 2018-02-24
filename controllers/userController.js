@@ -18,16 +18,9 @@ router.get('/', (req, res)=>{
 
     User.find().then((users)=>{
 
-        // const routines = users.map(user =>{
-        //     return user.routines
-        // })
-
-        // routines = routines.reduce((a, b) => a.concat(b), [])
-
-        // console.log(routines)
+        
         res.render('users/index', {
             users: users,
-            // routines: routines
         })
     })
 

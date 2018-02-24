@@ -12,6 +12,7 @@ const userController = require('./controllers/userController')
 const homeController = require('./controllers/homeController')
 const routineController = require('./controllers/routineController')
 const commentController = require('./controllers/commentController')
+const path = require('path')
 
 ///////////////////////////////////////////////////////
 ////////////////// App Settings ///////////////////////
@@ -33,6 +34,8 @@ app.use('/users', userController)
 app.use('/', homeController)
 app.use('/users/:userId/routines', routineController)
 app.use('/users/:userId/comments', commentController)
+app.use(express.static(path.join(__dirname, 'public')))
+
 
 ///////////////////////////////////////////////////////
 ////////////////// Listeners /////////////////////////

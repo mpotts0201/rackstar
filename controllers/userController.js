@@ -6,7 +6,7 @@ const express = require('express')
 const router = express.Router({ mergeParams: true })
 const User = require('../models/user')
 const Routine = require('../models/routine')
-
+const CommentModel = require('../models/comment')
 
 ///////////////////////////////////////////////////////
 ////////////////// Routes /////////////////////////////

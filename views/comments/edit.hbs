@@ -1,0 +1,13 @@
+<h1>Edit Comment</h1>
+
+<form method="post" action="/users/{{userId}}/comments/{{comment._id}}?_method=PATCH">
+    <div>
+        <label for="text">Name of Comment</label>
+        <input type="text" name="text" value="{{comment.text}}">
+    </div>
+
+    <button type="submit">Update Comment</button>
+
+<a href="/users/{{userId}}/comments/{{comment._id}}">Back to comment page</a>
+
+</form>

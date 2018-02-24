@@ -1,0 +1,13 @@
+<h1>Create a new comment</h1>
+
+<form action="/users/{{userId}}/comments" method="POST">
+<div>
+    <label for="text">Comment Text: </label>
+    <input type="text" name="text">
+</div>
+
+<button type="submit">Submit</button>
+
+
+<a href="/users/{{userId}}/comments">Back to Comment Index</a>
+</form>

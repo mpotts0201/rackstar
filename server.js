@@ -11,7 +11,7 @@ const mongoose = require('mongoose')
 const userController = require('./controllers/userController')
 const homeController = require('./controllers/homeController')
 const routineController = require('./controllers/routineController')
-
+const commentController = require('./controllers/commentController')
 
 ///////////////////////////////////////////////////////
 ////////////////// App Settings ///////////////////////
@@ -32,7 +32,7 @@ app.use(methodOverride('_method'))
 app.use('/users', userController)
 app.use('/', homeController)
 app.use('/users/:userId/routines', routineController)
-
+app.use('/users/:userId/comments', commentController)
 
 ///////////////////////////////////////////////////////
 ////////////////// Listeners /////////////////////////

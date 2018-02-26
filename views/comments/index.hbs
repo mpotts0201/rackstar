@@ -1,9 +1,9 @@
-<h1>{{user.username}}'s Comments</h1>
-
+<h3>{{user.username}}'s Comments</h3>
+<ul>
 {{#each comments}}
-<h3><a href="/users/{{../user._id}}/comments/{{_id}}">{{text}}</a></h3>
+<li><a href="/users/{{../user._id}}/comments/{{_id}}">{{text}}</a></li>
 {{/each}}
-
+</ul>
 <a href="/users/{{user._id}}/comments/new">Add a new comment</a>
 
 <a href="/users/">Back to users</a>

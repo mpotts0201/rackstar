@@ -4,16 +4,31 @@
     min-height: 100vh;
     flex-direction: column;
     font-family: 'Poiret One', cursive;
-
+    justify-content: center;
+    align-items: center;
+    background-image: url('http://www.kahode.com/i/2017/03/modern-weight-room-large-design-idea-with-industrial-style-cool-decorative-red-dumbbells-4-indoor-tennis-court-layout-houston-basketball-tdecu-stadium-luxury-sport-center-building-elegant.jpg');
+    background-position: center;
+    background-blend-mode: screen;
   }
 
+  input, label {
+    color:rgba(116, 116, 116, 0.562);
+    font-size: 14px;
+  }
+
+
 h1{
-  font-family: 'Monoton', cursive;
+  font-family: 'Archivo Black', sans-serif;
 }
 
 .title {
   font-family: 'Monoton', cursive;
 
+}
+
+h3{
+  font-weight: 700;
+  color: rgba(0, 26, 63, 0.788);
 }
 
   main {

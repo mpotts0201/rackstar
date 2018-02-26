@@ -10,3 +10,8 @@ https://secret-crag-94679.herokuapp.com/
 GitHUb: 
 https://github.com/mpotts0201/rackstar
 
+
+ERD's:
+
+![ERD Model](/Users/murphypotts/rackstarModel.png "Description goes here")
+

@@ -11,7 +11,6 @@ GitHUb:
 https://github.com/mpotts0201/rackstar
 
 
-ERD's:
+ERD's: https://imgur.com/KxdtZUz
 
-![ERD Model](https://imgur.com/KxdtZUz "My ERD")
 

@@ -13,5 +13,5 @@ https://github.com/mpotts0201/rackstar
 
 ERD's:
 
-![ERD Model](https://imgur.com/a/2un80 "Description goes here")
+![ERD Model](https://imgur.com/KxdtZUz "My ERD")
 

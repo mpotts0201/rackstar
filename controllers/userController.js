@@ -59,7 +59,7 @@ router.get('/allRoutines', (req, res)=>{
     })
 })
 
-// All Comments //
+// All Comments route//
 router.get('/allComments', (req, res)=>{
     User.find().then((users)=>{
 

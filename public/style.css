@@ -54,4 +54,11 @@ h3{
   .list{
     font-size: 25px;
   }
+
+  .home{
+    font-size: 20px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
       

@@ -1,6 +1,11 @@
 <h3>Create a new comment</h3>
 
 <form action="/users/{{userId}}/comments" method="POST">
+
+<div>
+    <label for="title">Comment Title: </label>
+    <input type="text" name="title">
+</div>
 <div>
     <label for="text">Comment Text: </label>
     <input type="text" name="text">

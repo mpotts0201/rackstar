@@ -1,3 +1,4 @@
+require('dotenv').config()
 const mongoose = require('mongoose')
 mongoose.connect('mongodb://localhost/rackstar')
 const User = require('../models/user')

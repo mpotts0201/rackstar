@@ -7,12 +7,17 @@
     justify-content: center;
     align-items: center;
     background-image: url('http://www.kahode.com/i/2017/03/modern-weight-room-large-design-idea-with-industrial-style-cool-decorative-red-dumbbells-4-indoor-tennis-court-layout-houston-basketball-tdecu-stadium-luxury-sport-center-building-elegant.jpg');
+    background: linear-gradient(
+      rgba(255, 255, 255, 0.9), 
+      rgba(255, 255, 255, 0.9)
+    ),url('http://www.kahode.com/i/2017/03/modern-weight-room-large-design-idea-with-industrial-style-cool-decorative-red-dumbbells-4-indoor-tennis-court-layout-houston-basketball-tdecu-stadium-luxury-sport-center-building-elegant.jpg');
     background-position: center;
-    background-blend-mode: screen;
+
   }
 
+
   input, label {
-    color:rgba(116, 116, 116, 0.562);
+    color:rgba(77, 77, 77, 0.562);
     font-size: 14px;
   }
 
@@ -33,5 +38,21 @@ h3{
 
   main {
     flex: 1 0 auto;
+  }
+
+  footer {
+    width: 100%;
+  }
+
+  a{
+    font-weight: bold;
+    display: block;
+
+
+  }
+
+  .list{
+    font-size: 25px;
+    list-style-type: square;
   }
       

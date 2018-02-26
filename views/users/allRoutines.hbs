@@ -1,0 +1,11 @@
+<h3>Routines</h3>
+{{#each users}}
+<ul>
+{{#each routines}}
+<li><a href="/users/{{../userId}}/routines/{{_id}}">{{name}}</a></li>
+{{/each}}
+</ul>
+{{/each}}
+
+
+<a href="/users/new">Sign up!</a>

@@ -1,0 +1,11 @@
+<h3>Comments</h3>
+{{#each users}}
+<ul>
+{{#each comments}}
+<li class="list"><a href="/users/{{userId}}/comments/{{_id}}">{{text}}</a></li>
+{{/each}}
+</ul>
+{{/each}}
+
+
+<a href="/users/new">Sign up!</a>

@@ -46,6 +46,31 @@ router.post('/', (req, res) => {
     })
 })
 
+// All Routines //
+router.get('/allRoutines', (req, res)=>{
+    User.find().then((users)=>{
+        User.findById(req.params.userId).then((user)=>{
+
+        res.render('users/allRoutines', {
+            users: users,
+            userId: req.params.userId
+        })
+    })
+    })
+})
+
+// All Comments //
+router.get('/allComments', (req, res)=>{
+    User.find().then((users)=>{
+
+        const userId = users._id
+        res.render('users/allComments', {
+            users: users,
+            userId: userId
+        })
+    })
+})
+
 // SHOW //
 router.get('/:id', (req, res)=>{
     User.findById(req.params.id).then((user)=>{

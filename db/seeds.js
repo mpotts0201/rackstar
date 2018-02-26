@@ -4,12 +4,45 @@ const User = require('../models/user')
 const Routine = require('../models/routine')
 const CommentModel = require('../models/comment')
 
-
+// Comments
 const firstComment = new CommentModel({
-    text: "What the fuck did you just fucking say about me, you little bitch? I’ll have you know I graduated top of my class in the Navy Seals, and I’ve been involved in numerous secret raids on Al-Quaeda, and I have over 300 confirmed kills. I am trained in gorilla warfare and I’m the top sniper in the entire US armed forces. You are nothing to me but just another target. I will wipe you the fuck out with precision the likes of which has never been seen before on this Earth, mark my fucking words. You think you can get away with saying that shit to me over the Internet? Think again, fucker. As we speak I am contacting my secret network of spies across the USA and your IP is being traced right now so you better prepare for the storm, maggot. The storm that wipes out the pathetic little thing you call your life. You’re fucking dead, kid. I can be anywhere, anytime, and I can kill you in over seven hundred ways, and that’s just with my bare hands. Not only am I extensively trained in unarmed combat, but I have access to the entire arsenal of the United States Marine Corps and I will use it to its full extent to wipe your miserable ass off the face of the continent, you little shit. If only you could have known what unholy retribution your little “clever” comment was about to bring down upon you, maybe you would have held your fucking tongue. But you couldn’t, you didn’t, and now you’re paying the price, you goddamn idiot. I will shit fury all over you and you will drown in it. You’re fucking dead, kiddo."
+    title: "Bench press grips",
+    text: "When gripping, be sure to keep hands spaced to about shoulder width."
 })
 
+const comment2 = new CommentModel({
+    title: "Squat level",
+    text: "When squatting, be sure to bottom out where your thighs become parallel with the ground."
+})
 
+const comment3 = new CommentModel({
+    title: "Shoulder warmup",
+    text: "Always warm up shoulders to avoid injuring your rotator cuff."
+})
+
+// Array for first user
+const comments1 = [firstComment, comment2, comment3]
+
+const comment4 = new CommentModel({
+    title: "Shoulder warmup",
+    text: "Always warm up shoulders to avoid injuring your rotator cuff."
+})
+
+const comment5 = new CommentModel({
+    title: "Shoulder warmup",
+    text: "Always warm up shoulders to avoid injuring your rotator cuff."
+})
+
+const comment6 = new CommentModel({
+    title: "Shoulder warmup",
+    text: "Always warm up shoulders to avoid injuring your rotator cuff."
+})
+
+// Array for second user
+const comments2 = [comment4, comment5, comment6]
+
+
+// Routines
 const chestPress = new Routine({
     name: "Chest Press",
     muscleGroup: "pectorals",
@@ -18,36 +51,69 @@ const chestPress = new Routine({
     sets: "3"
 })
 
+const squat = new Routine({
+    name: "Squats",
+    muscleGroup: "quads",
+    instructions: "Using the squat rack, align the bar on your shoulders.  Keeping your back straight, squat straight down into a deep squat.",
+    reps: "10-12",
+    sets: "4"
+})
+
+const shoulderPress = new Routine({
+    name: "Shoulder Press",
+    muscleGroup: "Mid deltoids",
+    instructions: "On an upright bench, with dumbells, press stright up until the dumbells meet above your head.",
+    reps: "8-10",
+    sets: "3"
+})
+
+const widePullUp = new Routine({
+    name: "Wide Grip Pull-up",
+    muscleGroup: "Lattismus Dorsi",
+    instructions: "On a wide grip pull up bar, with hands spread wider than shoulders, pull up, squeezing your upper back.",
+    reps: "8-10",
+    sets: "5"
+})
+
+const inclineCurl = new Routine({
+    name: "Incline Bench Curl",
+    muscleGroup: "bicep",
+    instructions: "Seated on an inclined bench, with your arms hanging at the sides holding dumbells, curl outward one arm at a time.",
+    reps: "8-12",
+    sets: "4"
+})
+
+const triPullDown = new Routine({
+    name: "Tricep Pull Down",
+    muscleGroup: "triceps",
+    instructions: "Using a pulley, attach the close grip v-bar.  With arms locked at your sides, use your triceps to curl down the pulley.",
+    reps: "8-10",
+    sets: "4"
+})
+
+// Array for first user 
+const routines1 = [chestPress, squat, shoulderPress]
 
 
+// Users
 const murphy = new User({
     name: "Murphy",
     age: 25,
     email: "mpotts0201@gmail.com",
     username: "mpotts0201",
-    routines: [ chestPress ],
-    comments: [ firstComment ]
+    routines: [chestPress, squat, shoulderPress],
+    comments: [firstComment, comment2, comment3]
 })
 
-// Save the comments
-
-CommentModel.remove().then(()=>{
-    return firstComment.save()
-}).then(()=>{
-    console.log("Comments are saved")
-}).catch((err)=>{
-    console.log(err)
+const cameron = new User({
+    name: "Cameron",
+    age: 24,
+    email: "cam1515@gmail.com",
+    username: "cam1515",
+    routines: [widePullUp, inclineCurl, triPullDown],
+    comments: [comment4, comment5, comment6]
 })
 
-// Save the routines
-
-Routine.remove().then(()=>{
-    return chestPress.save()
-}).then(()=>{
-    console.log("Routines are saved")
-}).catch((err)=>{
-    console.log(err)
-})
 
 // Save the users 
 
@@ -59,4 +125,15 @@ User.remove().then(()=>{
     console.log(err)
 })
 
-
+Routine.remove().then(()=>{
+    return CommentModel.remove()
+}).then(()=>{
+    return User.remove()
+}).then(()=>{
+    return User.insertMany([murphy, cameron])
+}).then(()=>{
+    console.log("Saved successfully")
+    db.close()
+}).catch((err)=>{
+    console.log(err)
+})

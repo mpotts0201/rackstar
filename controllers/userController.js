@@ -46,7 +46,7 @@ router.post('/', (req, res) => {
     })
 })
 
-// All Routines //
+// All Routines route //
 router.get('/allRoutines', (req, res)=>{
     User.find().then((users)=>{
         User.findById(req.params.userId).then((user)=>{

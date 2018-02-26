@@ -4,6 +4,17 @@ const User = require('../models/user')
 const Routine = require('../models/routine')
 const CommentModel = require('../models/comment')
 
+// db, mongoose, and listeners
+mongoose.connect(process.env.MONGODB_URI)
+const db = mongoose.connection
+db.on('open', () => {
+  console.log('Successfully connected to mongoDB')
+})
+db.on('error', (err) => {
+  console.log(err)
+})
+
+
 // Comments
 const firstComment = new CommentModel({
     title: "Bench press grips",
@@ -24,18 +35,18 @@ const comment3 = new CommentModel({
 const comments1 = [firstComment, comment2, comment3]
 
 const comment4 = new CommentModel({
-    title: "Shoulder warmup",
-    text: "Always warm up shoulders to avoid injuring your rotator cuff."
+    title: "Pull Up",
+    text: "When doing pull-ups, make sure to move your legs as little as possible."
 })
 
 const comment5 = new CommentModel({
-    title: "Shoulder warmup",
-    text: "Always warm up shoulders to avoid injuring your rotator cuff."
+    title: "Curling",
+    text: "When curlling, be sure to squeeze at the top of the compression."
 })
 
 const comment6 = new CommentModel({
-    title: "Shoulder warmup",
-    text: "Always warm up shoulders to avoid injuring your rotator cuff."
+    title: "Tricep Pull Downs",
+    text: "Be sure to use a weight that keeps you from using your shoulders to cheat in the motion."
 })
 
 // Array for second user

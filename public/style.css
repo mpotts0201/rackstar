@@ -3,7 +3,18 @@
     display: flex;
     min-height: 100vh;
     flex-direction: column;
+    font-family: 'Poiret One', cursive;
+
   }
+
+h1{
+  font-family: 'Monoton', cursive;
+}
+
+.title {
+  font-family: 'Monoton', cursive;
+
+}
 
   main {
     flex: 1 0 auto;

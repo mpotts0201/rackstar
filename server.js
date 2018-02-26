@@ -2,6 +2,7 @@
 ////////////////// Packages ///////////////////////////
 ///////////////////////////////////////////////////////
 
+require('dotenv').config()
 const express = require('express')
 const app = express()
 const bodyParser = require('body-parser')
@@ -20,7 +21,7 @@ const path = require('path')
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({extended:true}))
 
-mongoose.connect('mongodb://localhost/rackstar')
+mongoose.connect(process.env.MONGODB_URI)
 
 const db = mongoose.connection
 app.set('view engine', 'hbs')
